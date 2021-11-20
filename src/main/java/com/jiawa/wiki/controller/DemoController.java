@@ -17,7 +17,7 @@ public class DemoController {
     private DemoService demoService;
 
     @GetMapping("/list")
-    public List<Demo> demoMapper() {
+    public List<Demo> listr() {
         return demoService.list();
     }
 }
