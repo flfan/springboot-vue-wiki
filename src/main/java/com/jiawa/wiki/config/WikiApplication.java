@@ -1,11 +1,13 @@
-package com.jiawa.wiki;
+package com.jiawa.wiki.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
+@ComponentScan("com.jiawa")
 @SpringBootApplication
 public class WikiApplication {
 
@@ -17,5 +19,4 @@ public class WikiApplication {
         LOG.info("success start!!!");
         LOG.info("address: \thttp://127.0.0.1:{}", env.getProperty("server.port"));
     }
-
 }
